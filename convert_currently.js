@@ -88,11 +88,11 @@ class Player {
     }
   }
   
-  #CurrentLeftHandPosition() {
-    if ((PositionWithOffset(this.leftHandTransform, this.leftHandOffset) - tp(this.headCollider)).magnitude < this.maxArmLength) {
-      return PositionWithOffset(this.leftHandTransform, this.leftHandOffset);
+  #CurrentRightHandPosition() {
+    if ((PositionWithOffset(this.rightHandTransform, this.rightHandOffset) - tp(this.headCollider)).magnitude < this.maxArmLength) {
+      return PositionWithOffset(this.rightHandTransform, this.rightHandOffset);
     } else {
-      return tp(this.headCollider) + normalizeV3(PositionWithOffset(this.leftHandTransform, this.leftHandOffset) - tp(this.headCollider)) * this.maxArmLength;
+      return tp(this.headCollider) + normalizeV3(PositionWithOffset(this.rightHandTransform, this.rightHandOffset) - tp(this.headCollider)) * this.maxArmLength;
     }
   }
 }
