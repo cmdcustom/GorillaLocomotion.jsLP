@@ -96,3 +96,11 @@ class Player {
     }
   }
 }
+
+function makeGL(data) {
+  const inst = new Player();
+  
+  for (const [k,v] of Object.entries(data)) {
+    inst[k] = v
+  }
+}
