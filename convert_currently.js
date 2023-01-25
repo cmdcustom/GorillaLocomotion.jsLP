@@ -56,14 +56,6 @@ class Player {
   disableMovement = false; //Boolean
   object //THREE.Mesh
   #Awake() {
-    //             if (this.#Player != null && this.#Player != this)
-    //             {
-    //                 Scene.remove(this.object);
-    //             }
-    //             else
-    //             {
-    //                 _instance = this;
-    //             }
     this.InitializeValues();
   }
   
@@ -97,10 +89,12 @@ class Player {
   }
 }
 
-function makeGL(data) {
-  const inst = new Player();
+function makePlayerInstance(obj, data) {
+  const inst = new Player(obj);
   
   for (const [k,v] of Object.entries(data)) {
     inst[k] = v
   }
+  
+  inst.InitializeValues()
 }
