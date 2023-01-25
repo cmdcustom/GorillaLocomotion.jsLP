@@ -50,7 +50,7 @@ class Player {
   lastPosition; //THREE.Vector3
   rightHandOffset; //THREE.Vector3
   leftHandOffset; //THREE.Vector3
-  locomotionEnabledLayers; //Original: LayerMask, 32 bit integer, possibly variation of Number
+  locomotionEnabledLayers; //Original: LayerMask, 32 bit integer, THREE.Layers.Mask?
   wasLeftHandTouching; //Boolean
   wasRightHandTouching; //Boolean
   disableMovement = false; //Boolean
